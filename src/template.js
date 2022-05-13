@@ -1,8 +1,10 @@
-module.exports = function(title, data) {
+modules.exports = function(title, data) {
     return (
         `
-    <h1>${title}</h1>
+    <h1>${title}npm</h1>
     <main>${data}</main>
+    
+
     `
     );
 };
