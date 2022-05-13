@@ -1,4 +1,4 @@
-const Turtle = require("../lib/employee");
+const employee = require("../lib/employee");
 
 describe("Turtle", () => {
     describe("constructor", () => {

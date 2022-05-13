@@ -1,53 +1,82 @@
 const inquirer = require("inquirer");
-// const fs = require("fs");
+const template = require("./src/template")
+const fs = require("fs");
 
-// const Employee = require('./lib/employee');
-// const Engineer = require('./lib/engineer');
-// const Manager = require('./lib/manager');
-// const Intern = require('./lib/intern')
+const { Manager, managerInput } = require("./lib/manager");
+const { Engineer, engineerInput } = require("./lib/engineer");
+const { Intern, internInput } = require("./lib/intern")
 
-// let teamProfiles = [];
+let teamArray = [];
 
-// function questions() {
-inquirer.prompt([{
-            type: "input",
-            name: "name",
-            message: "Enter your name:"
-        },
-        {
-            type: "input",
-            name: "id",
-            message: "Enter Employee ID:"
-        },
-        {
-            type: "input",
-            name: "email",
-            message: "Enter your email address:"
-        },
-        {
-            type: "input",
-            name: "officeNumber",
-            message: "If you are are Manager, enter your office phone number:"
-        },
-        {
-            type: "input",
-            name: "github",
-            message: "If you are an Engineer, enter your GitHub username:"
-        },
-        {
-            type: "input",
-            name: "intern",
-            message: "If you an Intern, enter the name of your school:"
-        }
-    ])
-    .then((answer) => {
+const questions = () => { managerPrompts() }
+    //prompt to determine employee role 
+const employeePrompt = () => {
+        inquirer.prompt([{
+                type: "list",
+                name: "role",
+                message: "Select role of employee:",
+                choices: [
+                    { name: "Manager", value: "addManager" },
+                    { name: "Engineer", value: "addEngineer" },
+                    { name: "Intern", value: "addIntern" },
+                    { name: "complete", value: "complete" }
+                ]
+            }])
+            .then(answer => {
+                //prompt set of questions based on previous selection
+                if (answer.employeeRole === "addManager") {
+                    managerPrompts();
+                };
+                if (answer.employeeRole === "addEngineer") {
+                    engineerPrompts();
+                };
+                if (answer.employeeRole === "addIntern") {
+                    internPrompts();
+                };
+                if (answer.complete === "complete") {
+                    //render input to HTML
+                    let renderHTML = template(teamArray)
+                        //writes HTML file
+                    fs.writeFile("./index.html");
+                }
+            })
+    }
+    //prompts if user selects Manager
+const managerPrompts = () => {
+        inquirer.prompt(managerInput)
+            .then((answers) => {
+                answers = new Manager(
+                    answers.name,
+                    answers.id,
+                    answers.email,
+                    answers.officeNumber)
+                teamArray.push(answers);
+                return employeePrompt();
+            })
+    }
+    //prompts if user selects Engineer
+const engineerPrompts = () => {
+        inquirer.prompt(engineerInput)
+            .then((answers) => {
+                answers = new Engineer(
+                    answers.name,
+                    answers.id,
+                    answers.email,
+                    answers.github
+                )
+            })
+    }
+    //prompts if use selects Intern
+const internPrompts = () => {
+    inquirer.prompt(internInput)
+        .then((answers) => {
+            answers = new Intern(
+                answers.name,
+                answers.id,
+                answers.email,
+                answers.school
+            )
+        })
+}
 
-
-    });
-//prompts if user selects Engineer
-// .prompts.next({
-
-// })
-//prompts if user selects Manager
-//prompts if user selects Inter
-// };
+questions();
