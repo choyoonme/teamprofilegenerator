@@ -1,5 +1,5 @@
 //generate to html
-const generateProfiles = require("./src/generateProfiles");
+const generateHTML = require("./src/generateHTML");
 //node module files
 const inquirer = require("inquirer");
 const fs = require("fs");
@@ -60,6 +60,15 @@ const questions = [{
 
 ];
 inquirer.prompt(questions).then((answers) => {
+
+    const output = generateHTML(answers);
+
     //if employee role is engineer then prompt engineer questions
-    // fs.writeFile("../src/generateProfiles.js", generateProfiles)
-})
+    fs.writeFile("./dist/index.html", output, { encoding: "utf8" }, (err) => {
+        if (err) {
+            console.log(err)
+        } else {
+            console.log("Done!");
+        }
+    })
+});
