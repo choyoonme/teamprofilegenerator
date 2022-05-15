@@ -80,3 +80,80 @@ const internPrompts = () => {
 }
 
 questions();
+
+
+const engineerInput = [
+
+    {
+        type: 'input',
+        name: 'name',
+        message: "Enter name:"
+    },
+    {
+        type: 'input',
+        name: 'id',
+        message: "Enter employee ID:"
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: "Enter email:"
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: "Enter GitHub Username:"
+    }
+
+];
+
+
+const internInput = [
+
+    {
+        type: 'input',
+        name: 'name',
+        message: "Enter name:"
+    },
+    {
+        type: 'input',
+        name: 'id',
+        message: "Enter employee ID:"
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: "Enter email:"
+    },
+    {
+        type: 'input',
+        name: 'school',
+        message: "Enter name of school:"
+    }
+
+];
+
+const managerInput = [
+
+    {
+        type: 'input',
+        name: 'name',
+        message: "Enter name:"
+    },
+    {
+        type: 'input',
+        name: 'id',
+        message: "Enter employee ID:"
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: "Enter email:"
+    },
+    {
+        type: 'input',
+        name: 'officeNumber',
+        message: "Enter office number:"
+    }
+
+];

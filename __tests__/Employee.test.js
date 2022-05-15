@@ -1,22 +1,11 @@
-const employee = require("../lib/employee");
+const Employee = require("../lib/Employee");
 
-describe("Turtle", () => {
-    describe("constructor", () => {
-        it("should set 2 as `num` prop when given 2 as a num", () => {
-            const num = 2;
-            const t = new Turtle(num);
-            expect(t.num).toEqual(num);
-        });
-    });
-    describe("getTurtles", () => {
-        it("should get turtle twice when num is 2", () => {
-            const num = 2;
-            const expected = "Turtle Turtle ";
-            const t = new Turtle(num);
+test("should return an object containing name, id, email, and role", () => {
+    const employee = new Employee("John Lennon", "109", "yoko@ono.com", "Employee");
 
-            const answer = t.getTurtles();
+    expect(employee.getName()).toEqual("John Lennon");
+    expect(employee.getId()).toEqual("109");
+    expect(employee.getEmail()).toEqual("yoko@ono.com");
+    expect(employee.getRole()).toEqual("Employee");
 
-            expect(answer).toEqual(expected);
-        });
-    })
 });
