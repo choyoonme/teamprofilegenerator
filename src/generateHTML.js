@@ -1,8 +1,4 @@
-let teamArray = [];
-
-
 function generateHTML(answers) {
-
     return (`
 <!DOCTYPE html>
 <html lang="en">
@@ -24,20 +20,21 @@ function generateHTML(answers) {
 <br>
 <div class="container">
 <div class="row">
-<div class="col order-first">
-<div class="card" style="width: 18rem;">
-${generateProfiles(answers)}
+${answers.map(answer => generateProfiles(answer))}
 <footer></footer>
 <script src="index.js"></script>
 </body>
 </html>`)
 };
 
+
 function generateProfiles(answers) {
     if (answers.role === "Engineer") {
-        return (`
-        <div class="card-body">
-<h5 class="card-title"><i class="bi bi-person-circle m-2"></i>${answers.role}</h5>
+        return (` 
+<div class="col order-first">
+<div class="card" style="width: 18rem;">
+<div class="card-body">
+<h5 class="card-title"><i class="bi bi-person-circle m-2"></i>${answers.Intern}</h5>
 </div>
 <ul class="list-group list-group-flush">
 <li class="list-group-item">Name: ${answers.name}</li>
@@ -46,11 +43,13 @@ function generateProfiles(answers) {
 <li class="list-group-item">GitHub: ${answers.github}</li>
 </ul>
 </div>
-</div>`);
+</div>`)
     }
     if (answers.role === "Manager") {
         return (`
-        <div class="card-body">
+<div class="col order-first">
+<div class="card" style="width: 18rem;">
+<div class="card-body">
 <h5 class="card-title"><i class="bi bi-person-circle m-2"></i>${answers.role}</h5>
 </div>
 <ul class="list-group list-group-flush">
@@ -64,7 +63,9 @@ function generateProfiles(answers) {
     }
     if (answers.role === "Intern") {
         return (`
-        <div class="card-body">
+<div class="col order-first">
+<div class="card" style="width: 18rem;">
+<div class="card-body">
 <h5 class="card-title"><i class="bi bi-person-circle m-2"></i>${answers.role}</h5>
 </div>
 <ul class="list-group list-group-flush">
