@@ -20,7 +20,7 @@ function generateHTML(answers) {
 <br>
 <div class="container">
 <div class="row">
-${answers.map(answer => generateProfiles(answer))}
+${answers.map(answer => generateProfiles(answer)).join('')}
 <footer></footer>
 <script src="index.js"></script>
 </body>

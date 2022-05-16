@@ -73,7 +73,6 @@ let addTeamMember = true;
 async function main() {
     while (addTeamMember === true) {
         const answers = await askQuestions();
-        console.log(answers);
         teamArray.push(answers);
         addTeamMember = answers.add
 

@@ -33,7 +33,9 @@ THEN I exit the application, and the HTML is generated
 
 The following image shows a mock-up of the generated HTML’s appearance and functionality:
 
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/10-object-oriented-programming-homework-demo.png)
+![Screenshot of team profile website]()
+![Link to full length jest video](https://drive.google.com/file/d/1QWGLudIcAO5oiyV0_GbVFwP57KjBir3Z/view)
+![Link to full length inquirer video](https://drive.google.com/file/d/19zyqD6dFyTqUtRUpNVXpj2lypaXNI5Vo/view)
 
 The styling in the image is just an example, so feel free to add your own.
 
