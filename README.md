@@ -1,10 +1,18 @@
+![ISC](https://img.shields.io/badge/license-ISC-green.svg)
+
 # Team Profile Generator
 
+## Table of Contents
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Contributing](#contributing)
+6. [Test](#test)
+7. [Questions](#questions)
+
 ## Description
-
 This is a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage. Tests are included for each employee role. 
-
-## Acceptance Criteria
 
 ```md
 GIVEN a command-line application that accepts user input
@@ -26,14 +34,27 @@ WHEN I decide to finish building my team
 THEN I exit the application, and the HTML is generated
 ```
 
-## Mock-Up
-
+## Usage
 The following image shows a mock-up of the generated HTML’s appearance and functionality:
 
 ![Screenshot of team profile website](./assets/teamprofiles.png)
 ![Screenshot of passed tests](./assets/tests.png)
 
-[Link to full length jest video](https://drive.google.com/file/d/1QWGLudIcAO5oiyV0_GbVFwP57KjBir3Z/view)
+[Full Jest demo](https://drive.google.com/file/d/1QWGLudIcAO5oiyV0_GbVFwP57KjBir3Z/view)
 
-[Link to full length inquirer video](https://drive.google.com/file/d/1THvQlJcMe8qAG_oX7fCYD4BLT1ebKHa-/view)
+[Full Inquirer demo](https://drive.google.com/file/d/1THvQlJcMe8qAG_oX7fCYD4BLT1ebKHa-/view)
 
+
+## Installation
+This application will require the Inquirer module and can be invoked by typing `node index.js`
+
+## Contributing
+Jen Cho
+
+## Test
+This application requires the Jest module. To run test, type `npm run test`
+
+## Questions
+Email me with any questions at yoonme@gmail.com.
+
+Find me on Github: [choyoonme](http://www.github.com/choyoonme)
