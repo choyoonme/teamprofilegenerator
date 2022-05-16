@@ -2,10 +2,7 @@
 
 ## Description
 
-Your task is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Testing is key to making code maintainable, so you’ll also write a unit test for every part of your code and ensure that it passes each test.
-
-Because this application won’t be deployed, you’ll need to provide a link to a walkthrough video that demonstrates its functionality and all of the tests passing. You’ll need to submit a link to the video AND add it to the readme of your project.
-
+This is a Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage. Tests are included for each employee role. 
 
 ## Acceptance Criteria
 
@@ -33,9 +30,10 @@ THEN I exit the application, and the HTML is generated
 
 The following image shows a mock-up of the generated HTML’s appearance and functionality:
 
-![Screenshot of team profile website]()
-![Link to full length jest video](https://drive.google.com/file/d/1QWGLudIcAO5oiyV0_GbVFwP57KjBir3Z/view)
-![Link to full length inquirer video](https://drive.google.com/file/d/19zyqD6dFyTqUtRUpNVXpj2lypaXNI5Vo/view)
+![Screenshot of team profile website](./assets/teamprofiles.png)
+![Screenshot of passed tests](./assets/tests.png)
 
-The styling in the image is just an example, so feel free to add your own.
+[Link to full length jest video](https://drive.google.com/file/d/1QWGLudIcAO5oiyV0_GbVFwP57KjBir3Z/view)
+
+[Link to full length inquirer video](https://drive.google.com/file/d/1THvQlJcMe8qAG_oX7fCYD4BLT1ebKHa-/view)
 
