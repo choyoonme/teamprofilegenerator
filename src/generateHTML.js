@@ -34,7 +34,7 @@ function generateProfiles(answers) {
 <div class="col order-first">
 <div class="card" style="width: 18rem;">
 <div class="card-body">
-<h5 class="card-title"><i class="bi bi-person-circle m-2"></i>${answers.Intern}</h5>
+<h5 class="card-title"><i class="bi bi-person-circle m-2"></i>${answers.role}</h5>
 </div>
 <ul class="list-group list-group-flush">
 <li class="list-group-item">Name: ${answers.name}</li>
