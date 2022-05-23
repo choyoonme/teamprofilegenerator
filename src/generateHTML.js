@@ -39,8 +39,8 @@ function generateProfiles(answers) {
 <ul class="list-group list-group-flush">
 <li class="list-group-item">Name: ${answers.name}</li>
 <li class="list-group-item">ID: ${answers.id}</li>
-<li class="list-group-item">Email: ${answers.email}</li>
-<li class="list-group-item">GitHub: ${answers.github}</li>
+<li class="list-group-item">Email:<a href ="mailto:${answers.email}">${answers.email}</a></li>
+<li class="list-group-item">GitHub: <a href="https://github.com/${engineer.github}">${answers.github}</a></li>
 </ul>
 </div>
 </div>`)
@@ -55,7 +55,7 @@ function generateProfiles(answers) {
 <ul class="list-group list-group-flush">
 <li class="list-group-item">Name: ${answers.name}</li>
 <li class="list-group-item">ID: ${answers.id}</li>
-<li class="list-group-item">Email: ${answers.email}</li>
+<li class="list-group-item">Email:<a href ="mailto:${answers.email}">${answers.email}</a></li>
 <li class="list-group-item">Office Number: ${answers.officeNumber}</li>
 </ul>
 </div>
@@ -71,7 +71,7 @@ function generateProfiles(answers) {
 <ul class="list-group list-group-flush">
 <li class="list-group-item">Name: ${answers.name}</li>
 <li class="list-group-item">ID: ${answers.id}</li>
-<li class="list-group-item">Email: ${answers.email}</li>
+<li class="list-group-item">Email:<a href="mailto:${answers.email}"> ${answers.email}</a></li>
 <li class="list-group-item">School: ${answers.school}</li>
 </ul>
 </div>
