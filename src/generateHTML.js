@@ -40,7 +40,7 @@ function generateProfiles(answers) {
 <li class="list-group-item">Name: ${answers.name}</li>
 <li class="list-group-item">ID: ${answers.id}</li>
 <li class="list-group-item">Email:<a href ="mailto:${answers.email}">${answers.email}</a></li>
-<li class="list-group-item">GitHub: <a href="https://github.com/${engineer.github}">${answers.github}</a></li>
+<li class="list-group-item">GitHub: <a href="https://github.com/${answers.github}">${answers.github}</a></li>
 </ul>
 </div>
 </div>`)
